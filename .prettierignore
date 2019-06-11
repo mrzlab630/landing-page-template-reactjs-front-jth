@@ -1,0 +1,12 @@
+.github/
+
+# editor configs
+.idea/
+.vscode/
+
+dist/
+
+package.json
+
+# Config files
+config/

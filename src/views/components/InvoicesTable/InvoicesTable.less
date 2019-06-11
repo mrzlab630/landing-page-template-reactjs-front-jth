@@ -1,0 +1,39 @@
+.tableHeader {
+  color: #898A8C !important;
+  font-weight: 300 !important;
+  letter-spacing: 1px;
+  text-transform: uppercase !important;
+}
+
+.tableCell {
+  color: #404144;
+}
+
+.lastCell {
+  position: relative;
+}
+
+.downloadIcon {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 5px;
+  bottom: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+  .tableHeaderWrapper {
+    display: flex !important;
+    border-bottom: 1px solid #f2711c;
+  }
+  .tableHeader {
+    font-size: 10px;
+    font-weight: 400 !important;
+  }
+  .downloadIcon {
+    margin: 0;
+    height: 20px;
+    position: initial;
+  }
+}

@@ -1,0 +1,78 @@
+@import '~heading.less';
+
+.homePageWrapper {
+  padding: 60px 0;
+}
+
+.settingsForm {
+  padding: 40px 0;
+}
+
+.fieldHeaderText {
+  font-size: 1.2em !important;
+}
+
+.timeSummaryWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.orangeButton {
+  color: #F2711C !important;
+  font-weight: 400 !important;
+  background: #F9EDE7 !important;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #000;
+  margin: 0 1px;
+}
+
+.editIcon {
+  width: 12px
+}
+
+.editLabel {
+  margin-left: 5px;
+  color: #ef6837;
+}
+
+.editWrapper {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 30px;
+}
+
+.pageTitle {
+  font-size: 18px;
+}
+
+.userInfoWrapper {
+  display: flex;
+}
+
+.textOrange {
+  color: #EF6722;
+}
+
+.textBold {
+  font-family: MetropolisBold;
+}
+
+@media only screen and (max-width: 768px) {
+  .homePageWrapper {
+    padding: 30px 0;
+  }
+  .settingsForm {
+    padding: initial
+  }
+  .userInfoWrapper {
+    flex-direction: column;
+  }
+}

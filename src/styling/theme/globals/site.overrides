@@ -1,0 +1,74 @@
+/*******************************
+        Global Overrides
+*******************************/
+
+.vertical-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0px !important;
+    height: 100%;
+    width: 2px !important;
+    background: #EBECED !important;
+}
+
+.vertical-timeline-element-content {
+    padding: 0 !important;
+    box-shadow: none !important;
+}
+
+.vertical-timeline-element {
+    margin: 0 !important;
+}
+
+.vertical-timeline-element-icon {
+    left: -9px !important;
+}
+
+.vertical-timeline {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.vertical-timeline-element-content .vertical-timeline-element-date {
+    padding: 0 !important;
+}
+
+.vertical-timeline-element-content {
+    margin-left: 28px !important;
+}
+
+
+.ui.secondary.pointing.menu .active.item {
+    color: rgb(242, 107, 47) !important;
+    border-color: rgb(242, 107, 47) !important;
+}
+
+.ui.secondary.pointing.menu {
+    border-bottom: 2px solid #F5F6F7 !important;
+}
+
+
+textarea {
+    margin: 0em;
+    max-width: 100%;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    text-align: left;
+    line-height: 1.21428571em;
+    font-family: MetropolisMedium, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    padding: 0.67857143em 1em;
+    background: #FFFFFF;
+    border: 1px solid rgba(34, 36, 38, 0.15);
+    color: rgba(0, 0, 0, 0.87);
+    border-radius: 0.28571429rem;
+    -webkit-transition: border-color 0.1s ease, -webkit-box-shadow 0.1s ease;
+    transition: border-color 0.1s ease, -webkit-box-shadow 0.1s ease;
+    -o-transition: box-shadow 0.1s ease, border-color 0.1s ease;
+    transition: box-shadow 0.1s ease, border-color 0.1s ease;
+    transition: box-shadow 0.1s ease, border-color 0.1s ease, -webkit-box-shadow 0.1s ease;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}

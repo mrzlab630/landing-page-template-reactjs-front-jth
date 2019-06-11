@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>%REACT_APP_NAME%</title>
+
+    <!-- Technical details -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Search Engine -->
+    <meta name="description" content="%REACT_APP_DESCRIPTION%" />
+    <meta name="image" content="%REACT_APP_URL%/assets/social.png" />
+
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="%REACT_APP_NAME%" />
+    <meta itemprop="description" content="%REACT_APP_DESCRIPTION%" />
+    <meta itemprop="image" content="%REACT_APP_URL%/assets/social.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="%REACT_APP_NAME%" />
+    <meta name="twitter:description" content="%REACT_APP_DESCRIPTION%" />
+    <meta name="twitter:site" content="%REACT_APP_TWITTER_SITE%" />
+    <meta name="twitter:creator" content="%REACT_APP_TWITTER_SITE%" />
+    <meta
+      name="twitter:image:src"
+      content="%REACT_APP_URL%/assets/twitter-card.png"
+    />
+
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta name="og:title" content="%REACT_APP_NAME%" />
+    <meta name="og:description" content="%REACT_APP_DESCRIPTION%" />
+    <meta name="og:image" content="%REACT_APP_URL%/assets/open-graph.png" />
+    <meta name="og:url" content="%REACT_APP_URL%" />
+    <meta name="og:site_name" content="%REACT_APP_NAME%" />
+    <meta name="og:type" content="website" />
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="%REACT_APP_URL%/assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="%REACT_APP_URL%/assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="%REACT_APP_URL%/assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="%REACT_APP_URL%/assets/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="%REACT_APP_URL%/assets/safari-pinned-tab.svg"
+      color="%REACT_APP_COLOR%"
+    />
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/metropolis" type="text/css" />
+    <link rel="shortcut icon" href="%REACT_APP_URL%/assets/favicon.ico" />
+    <meta name="msapplication-TileColor" content="%REACT_APP_COLOR%" />
+    <meta
+      name="msapplication-config"
+      content="%REACT_APP_URL%/assets/browserconfig.xml"
+    />
+    <meta name="theme-color" content="%REACT_APP_COLOR%" />
+  </head>
+  <body>
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css"
+      />
+
+      <div
+        class="flex sans-serif flex-column items-center justify-center w-100 min-vh-100"
+      >
+        <div class="flex flex-column w-100 mw6 tc">
+          <span class="f1">😵</span>
+          <h2 class="lh-title">
+            Yikes! Please enable JavaScript in your browser to use this
+            application.
+          </h2>
+
+          <p class="mv0 lh-copy">
+            We promise that we are not planning on doing anything evil to your
+            computer! This application uses JavaScript only to bring you the
+            best possible experience.
+          </p>
+        </div>
+      </div>
+    </noscript>
+
+    <div id="root"></div>
+  </body>
+</html>

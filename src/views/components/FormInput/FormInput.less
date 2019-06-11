@@ -1,0 +1,33 @@
+.columnWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.rowWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.fieldLabel {
+  width: 30%;
+  font-weight: 400 !important;
+}
+
+.textWrapper {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+}
+
+.fieldText {
+  font-weight: 400 !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .fieldLabel {
+    width: 100%;
+  }
+  .textWrapper {
+    justify-content: end;
+  }
+}

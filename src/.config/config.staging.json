@@ -1,0 +1,9 @@
+{
+  "dbHost": "copytesting-staging.herokuapp.com",
+  "dbPathAuth": "auth/local",
+  "dbPathGraphQl": "graphql",
+  "dbPort": "",
+  "dbProtocol": "https",
+  "dbPassword": "",
+  "dbUser": ""
+}

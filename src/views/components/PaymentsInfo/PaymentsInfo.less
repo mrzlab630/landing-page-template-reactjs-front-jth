@@ -1,0 +1,41 @@
+.billingLabel {
+  font-size: 12px;
+  line-height: 12px;
+  color: #898A8C;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.billingValue {
+  font-size: 32px;
+  font-weight: 200;
+  line-height: 26px;
+  color: #222426;
+}
+
+.paymentButton {
+  width: 100%;
+  height: 100%;
+  font-weight: 400 !important;
+  letter-spacing: 1px !important;
+}
+
+.billingField {
+  display: flex !important;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 768px) {
+  .billingValue {
+    font-size: 18px;
+  }
+  .billingLabel {
+    margin: 0;
+  }
+  .billingField {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px !important;
+  }
+}
