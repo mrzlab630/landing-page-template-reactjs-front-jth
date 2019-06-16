@@ -14,10 +14,12 @@ const Panel = ({ breadcrumbs = null, customStyles, title, params, ...props}) => 
         <Container>
             {breadcrumbs && <Breadcrumbs breadcrumbs={breadcrumbs} />}
             <Segment.Group raised>
-                <Segment className={styles.panelHeader}>
-                    <label className={styles.panelHeaderText}>{title}</label>
-                    {params ? params : null}
-                </Segment>
+                {title.length != 0 && (
+                    <Segment className={styles.panelHeader}>
+                        <label className={styles.panelHeaderText}>{title}</label>
+                        {params ? params : null}
+                    </Segment>
+                )}
                 <Segment className={styles.panelBody}>
                     {props.children}
                 </Segment>

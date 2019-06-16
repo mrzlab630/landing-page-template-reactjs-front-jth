@@ -7,17 +7,20 @@ import { auth } from './../utils/authToken';
 import { LayoutNavigation, LayoutNoFooter } from './../views/layouts';
 
 import {
+  ToDoPage,
+  ToDoTaskPage,
   BillingPage,
   SettingsPage,
   PaymentsPage,
   ContractPage,
   ProjectsPage,
+  MessangerPage,
   ProjectsAllPage,
   TimeScreensPage,
   TimeSummaryPage,
   TimeContractPage,
-  InviteFreelancerPage,
-  PendingContractPage
+  PendingContractPage,
+  InviteFreelancerPage
 } from './../views/pages';
 
 const routes = [
@@ -91,6 +94,24 @@ const routes = [
     exact: true,
     path: '/projects/all',
     page: ProjectsAllPage,
+    layout: LayoutNavigation
+  },
+  {
+    exact: true,
+    path: '/todo',
+    page: ToDoPage,
+    layout: LayoutNavigation
+  },
+  {
+    exact: true,
+    path: '/todo/task',
+    page: ToDoTaskPage,
+    layout: LayoutNavigation
+  },
+  {
+    exact: true,
+    path: '/messanger',
+    page: MessangerPage,
     layout: LayoutNavigation
   },
   {

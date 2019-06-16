@@ -1,0 +1,35 @@
+.masonryGrid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -30px;
+  width: auto;
+}
+
+.masonryColumn {
+  padding-left: 30px;
+  background-clip: padding-box;
+}
+
+.masonryColumn > div {
+    background: white;
+    margin-bottom: 30px;
+    border-radius: 4px;
+}
+
+.panelSubTitle {
+  font-size: 16px;
+  color: #000;
+}
+
+.panelSubTitleWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .panelSubTitleWrapper {
+    flex-direction: row;
+  }
+}
