@@ -1,57 +1,5 @@
 @import '~heading.less';
 
-.homePageWrapper {
-  padding: 60px 0;
-}
-
-.settingsForm {
-  padding: 40px 0;
-}
-
-.fieldHeaderText {
-  font-size: 1.2em !important;
-}
-
-.fieldHeaderWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.orangeButton {
-  color: #F2711C !important;
-  background: #F9EDE7 !important;
-}
-
-.dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: #000;
-  margin: 0 1px;
-}
-
-.editIcon {
-  width: 12px
-}
-
-.editLabel {
-  margin-left: 5px;
-  color: #ef6837;
-}
-
-.editWrapper {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  height: 30px;
-}
-
-.pageTitle {
-  font-size: 18px;
-}
-
 .inputLabel {
   font-weight: 400 !important;
   font-size: 14px !important;
@@ -59,11 +7,32 @@
   background: #F5F6F7 !important;
 }
 
-@media only screen and (max-width: 768px) {
-  .homePageWrapper {
-    padding: 30px 0;
-  }
-  .settingsForm {
-    padding: initial
-  }
+.attachmentRow {
+  margin: 0;
+  margin-bottom: 2px;
 }
+
+.fieldHidden {
+  height: 20px;
+  margin: 0em 0em 1em;
+  line-height: 1.4285em;
+  visibility: hidden;
+}
+
+.fieldNotDisplayed {
+  display: none;
+}
+
+.noPadding {
+  padding: 0 !important;
+}
+
+.noPT {
+  padding-top: 0 !important;
+}
+
+.noPB {
+  padding-bottom: 0 !important;
+}
+
+@media only screen and (max-width: 768px) {}

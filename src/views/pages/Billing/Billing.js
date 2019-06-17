@@ -1,98 +1,78 @@
 import React from 'react';
-import {
-  Grid,
-  Form,
-  Button,
-  Image,
-  Divider,
-  Dropdown
+import PropTypes from 'prop-types';
+import { 
+  Grid, 
+  Form, 
+  Divider, 
+  Dropdown 
 } from 'semantic-ui-react';
-
-import Panel from './../../components/Panel';
-import PanelSubTitle from './../../components/PanelSubTitle';
-import visa from './../../../assets/visa.svg';
-import paypal from './../../../assets/paypal.svg';
+import { 
+  Panel, 
+  Sprite, 
+  Button, 
+  PanelSubTitle 
+} from './../../components';
 import * as styles from './Billing.less';
 
-const flexCenter = {
-  display: 'flex',
-  alignItems: 'center'
-};
-const rowStyle = {
-  display: 'flex',
-  flexDirection: 'row',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  marginTop: 10
-};
-const buttonStyle = {
-  margin: 0,
-  fontWeight: 400
+const BillingCard = ({ title, value, icon }) => (
+  <Form.Field className={styles.billingInfoWrapper}>
+    <div className={styles.billingInfo}>
+      <Sprite name={icon} />
+      <span className={styles.billingMethod}>{title}</span>
+    </div>
+    <div>
+      <label>{value}</label>
+    </div>
+    <Dropdown text='•••' direction='left' icon={null}>
+      <Dropdown.Menu>
+        <Dropdown.Item text='Set as primary' />
+        <Dropdown.Item text='Remove' />
+      </Dropdown.Menu>
+    </Dropdown>
+  </Form.Field>
+);
+
+BillingCard.propTypes = {
+  title: PropTypes.string,
+  value: PropTypes.string,
+  icon: PropTypes.string
 }
 
 const Billing = () => {
   return (
     <Panel
       title='Billing Methods'
-      params={() => (
-        <Button
-          color='orange'
-          style={buttonStyle}
-          className={styles.fieldText}
-        >Add method</Button>
-      )}
+      params={<Button color='orange' text='Add method' />}
     >
-      <Grid centered>
-        <Grid.Column
-          computer={8}
-          mobile={16}
-          textAlign='left'
-          verticalAlign='middle'
-        >
-          <Form>
-            <PanelSubTitle title='Primary method' />
-            <Form.Field style={rowStyle}>
-              <div style={flexCenter}>
-                <Image src={visa} />
-                <span>&nbsp;Visa</span>
-              </div>
-              <div className={styles.textWrapper}>
-                <label className={styles.fieldText}>
-                  •••• •••• •••• 2079
-                </label>
-              </div>
-              <Dropdown text='•••' icon={null} direction='left'>
-                <Dropdown.Menu>
-                  <Dropdown.Item text='Set as primary' />
-                  <Dropdown.Item text='Remove' />
-                </Dropdown.Menu>
-              </Dropdown>
-            </Form.Field>
-            <Divider />
-            <PanelSubTitle title='Additional method' />
-            <Form.Field style={rowStyle}>
-              <div style={flexCenter}>
-                <Image src={paypal} />
-                <span>&nbsp;Paypal</span>
-              </div>
-              <div className={styles.textWrapper}>
-                <label className={styles.fieldText}>
-                  example@example.com
-                </label>
-              </div>
-              <Dropdown text='•••' icon={null}>
-                <Dropdown.Menu>
-                  <Dropdown.Item text='Set as primary' />
-                  <Dropdown.Item text='Remove' />
-                </Dropdown.Menu>
-              </Dropdown>
-            </Form.Field>
-            <br />
-          </Form>
-        </Grid.Column>
-      </Grid>
+      <div className={styles.billingWrapper}>
+        <Grid centered>
+          <Grid.Column
+            computer={8}
+            mobile={16}
+            textAlign='left'
+            verticalAlign='middle'
+          >
+            <Form>
+              <PanelSubTitle title='Primary method' />
+              <BillingCard
+                title='Visa'
+                value='•••• •••• •••• 2079'
+                icon='visa'
+              />
+              <Divider />
+              <PanelSubTitle title='Additional method' />
+              <BillingCard
+                title='Paypal'
+                value='example@example.com'
+                icon='paypal'
+              />
+              <br />
+            </Form>
+          </Grid.Column>
+        </Grid>
+      </div>
     </Panel>
-  )
-}
+  );
+};
 
 export default Billing;

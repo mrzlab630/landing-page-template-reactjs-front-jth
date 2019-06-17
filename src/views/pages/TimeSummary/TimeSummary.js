@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
-import { Grid, Image, Button, Divider } from 'semantic-ui-react';
-import Panel from './../../components/Panel';
+import { Grid, Button, Divider } from 'semantic-ui-react';
+import { Panel, Text, Paragraph } from './../../components';
 import userAvatar1 from './../../../assets/userAvatar1.svg';
 import userAvatar2 from './../../../assets/userAvatar2.svg';
 import * as styles from './TimeSummary.less';
@@ -79,51 +79,51 @@ const TimeSummary = () => {
 			title='Weekly Summary'
 			breadcrumbs='Reports'
 		>
-			<Grid>
+			<Grid className={styles.timeSummary}>
 				<TimeSummaryRow
 					title={() => (
-						<span>Contract</span>
+						<Text>Contract</Text>
 					)}
 					mon={() => (
 						<Fragment>
-							<p style={noMargin}>Mon</p>
-							<p style={noMargin}>Apr 16</p>
+							<Paragraph customStyles={noMargin}>Mon</Paragraph>
+							<Paragraph customStyles={noMargin}>Apr 16</Paragraph>
 						</Fragment>
 					)}
 					tue={() => (
 						<Fragment>
-							<p style={noMargin}>Tue</p>
-							<p style={noMargin}>Apr 16</p>
+							<Paragraph customStyles={noMargin}>Tue</Paragraph>
+							<Paragraph customStyles={noMargin}>Apr 16</Paragraph>
 						</Fragment>
 					)}
 					wed={() => (
 						<Fragment>
-							<p style={noMargin}>Wed</p>
-							<p style={noMargin}>Apr 16</p>
+							<Paragraph customStyles={noMargin}>Wed</Paragraph>
+							<Paragraph customStyles={noMargin}>Apr 16</Paragraph>
 						</Fragment>
 					)}
 					thu={() => (
 						<Fragment>
-							<p style={noMargin}>Thu</p>
-							<p style={noMargin}>Apr 16</p>
+							<Paragraph customStyles={noMargin}>Thu</Paragraph>
+							<Paragraph customStyles={noMargin}>Apr 16</Paragraph>
 						</Fragment>
 					)}
 					fri={() => (
 						<Fragment>
-							<p style={noMargin}>Fri</p>
-							<p style={noMargin}>Apr 16</p>
+							<Paragraph customStyles={noMargin}>Fri</Paragraph>
+							<Paragraph customStyles={noMargin}>Apr 16</Paragraph>
 						</Fragment>
 					)}
 					sat={() => (
 						<Fragment>
-							<p style={noMargin}>Sat</p>
-							<p style={noMargin}>Apr 16</p>
+							<Paragraph customStyles={noMargin}>Sat</Paragraph>
+							<Paragraph customStyles={noMargin}>Apr 16</Paragraph>
 						</Fragment>
 					)}
 					sun={() => (
 						<Fragment>
-							<p style={noMargin}>Sun</p>
-						<p style={noMargin}>Apr 16</p>
+							<Paragraph customStyles={noMargin}>Sun</Paragraph>
+							<Paragraph customStyles={noMargin}>Apr 16</Paragraph>
 						</Fragment>
 					)}
 					hrs='Hours'
@@ -142,8 +142,8 @@ const TimeSummary = () => {
 										customStyle={{ marginRight: 10 }}
 									/>
 									<p style={flexColumn}>
-										<span className={styles.textOrange}>Developer needed for Real Estate...</span>
-										<span>Nolan Pramod</span>
+										<Text color='#EF6722'>Developer needed for Real Estate...</Text>
+										<Text>Nolan Pramod</Text>
 									</p>
 								</div>
 							</Grid.Column>
@@ -200,8 +200,8 @@ const TimeSummary = () => {
 										customStyle={{ marginRight: 10 }}
 									/>
 									<p style={flexColumn}>
-										<span className={styles.textOrange}>Developer needed for Real Estate...</span>
-										<span>Harriett Ambrus</span>
+										<Text color='#EF6722'>Developer needed for Real Estate...</Text>
+										<Text>Harriett Ambrus</Text>
 									</p>
 								</div>
 							</Grid.Column>
@@ -253,19 +253,16 @@ const TimeSummary = () => {
 						mobile={4}
 						computer={1}
 						textAlign='center'
-						className={styles.textBold}
 					>Total:</Grid.Column>
 					<Grid.Column
 						mobile={4}
 						computer={2}
 						textAlign='center'
-						className={styles.textBold}
 					>25:30</Grid.Column>
 					<Grid.Column
 						mobile={4}
 						computer={1}
 						textAlign='center'
-						className={styles.textBold}
 					>$3803</Grid.Column>
 				</Grid.Row>
 				<br />

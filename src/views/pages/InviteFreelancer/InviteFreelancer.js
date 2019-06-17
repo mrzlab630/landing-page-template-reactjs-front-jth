@@ -1,20 +1,21 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import {
   Grid,
   Input,
-  Button,
   Divider,
   Checkbox,
   Container,
 } from 'semantic-ui-react';
-
-import Panel from '../../components/Panel';
-import PanelSubTitle from '../../components/PanelSubTitle';
-import FormInput from '../../components/FormInput';
-
+import { 
+  Text,
+  Panel,
+  Sprite,
+  Button,
+  Paragraph,
+  FormInput,
+  PanelSubTitle
+} from '../../components/';
 import * as styles from './InviteFreelancer.less';
-import close from '../../../assets/close.svg';
-import clip from '../../../assets/clip.svg';
 
 const formInputStyle = {
   height: '70px',
@@ -22,53 +23,51 @@ const formInputStyle = {
   justifyContent: 'space-between'
 }
 
-const title = {
+const titleStyle = {
   fontFamily: 'MetropolisMedium',
   fontSize: '20px',
   lineHeight: '20px',
   color: '#EF6722'
 }
 
-const clearPadding = {
-  padding: 0
+const closeIconStyle = {
+  width: '10px',
+  marginRight: '15px'
 }
 
-const greyText = {
-  fontFamily: 'Metropolis',
-  fontSize: '14px',
-  lineHeight: '14px',
-  color: '#6B6C6F'
+const clipIconStyle = {
+  width: '20px',
+  marginRight: '10px', 
+  marginTop: '20px'
 }
 
-const orangeText = {
-  color: '#EF6722'
-}
+const attachments = [ 'guidelines.pdf','file_name_14-04-2019.doc','homepage_wireframe.png','test_design.fig' ];
 
 const InviteFreelancerPage = () => {
-  const SubTitle = () => (
-    <span>Follow the steps below to hire a freelancer and start your project now</span>
-  )
   const screenSize = window.innerWidth  || document.body.clientWidth;
 	const isMobile = screenSize < 420
   return (
     <Panel
       title='Hire a Freelancer'
-      params={<SubTitle />}
+      params={
+        <Fragment>
+          <Text>Follow the steps below to hire a freelancer and start your project now</Text>
+        </Fragment>
+      }
     >
       <Container>
         <Grid centered>
           <Grid.Row></Grid.Row>
           <Grid.Row centered>
             <Grid.Column computer={10} mobile={16}>
-              <PanelSubTitle title='Freelancer’s email' customStyle={title} />
+              <PanelSubTitle title='Freelancer’s email' customStyle={titleStyle} />
             </Grid.Column>
           </Grid.Row>
-          <Grid.Row style={clearPadding} centered>
+          <Grid.Row className={styles.noPadding} centered>
             <Grid.Column computer={10} mobile={16}>
               <FormInput
                 edit={true}
                 title='Email'
-                value=''
                 customStyle={formInputStyle}
               />
             </Grid.Column>
@@ -78,17 +77,16 @@ const InviteFreelancerPage = () => {
               <Divider />
             </Grid.Column>
           </Grid.Row>
-          <Grid.Row style={{ paddingTop: 0 }} centered>
+          <Grid.Row className={styles.noPT} centered>
             <Grid.Column computer={10} mobile={16}>
-              <PanelSubTitle title='Describe the Job' customStyle={title} />
+              <PanelSubTitle title='Describe the Job' customStyle={titleStyle} />
             </Grid.Column>
           </Grid.Row>
-          <Grid.Row style={clearPadding} centered>
+          <Grid.Row className={styles.noPadding} centered>
             <Grid.Column computer={10} mobile={16}>
               <FormInput
                 edit={true}
                 title='Give your project a title'
-                value=''
                 customStyle={formInputStyle}
               />
             </Grid.Column>
@@ -97,10 +95,9 @@ const InviteFreelancerPage = () => {
             <Grid.Column computer={10} mobile={16}>
               <FormInput
                 edit={true}
+                type='textarea'
                 title='Supply project brief'
                 placeholder='Project title'
-                type='textarea'
-                value=''
                 customStyle={formInputStyle}
               />
             </Grid.Column>
@@ -108,28 +105,18 @@ const InviteFreelancerPage = () => {
           <br />
           <Grid.Row centered>
             <Grid.Column computer={10} mobile={16}>
-              <img src={clip} style={{ width: '20px', marginRight: '10px', marginTop: '20px' }} />
-              <span style={{ color: '#236ee8' }}>Attach files</span>
+              <Sprite name='clip' customStyle={clipIconStyle} />
+              <Text color='#236ee8'>Attach files</Text>
             </Grid.Column>
           </Grid.Row>
-          <Grid.Row style={clearPadding} centered>
+          <Grid.Row className={styles.noPadding} centered>
             <Grid.Column computer={10} mobile={16}>
-              <p style={{ margin: 0, marginBottom: '2px' }}>
-                <img src={close} width='10' />&nbsp;&nbsp;&nbsp;
-                guidelines.pdf
-              </p>
-              <p style={{ margin: 0, marginBottom: '2px' }}>
-                <img src={close} width='10' />&nbsp;&nbsp;&nbsp;
-                file_name_14-04-2019.doc
-              </p>
-              <p style={{ margin: 0, marginBottom: '2px' }}>
-                <img src={close} width='10' />&nbsp;&nbsp;&nbsp;
-                homepage_wireframe.png
-              </p>
-              <p style={{ margin: 0, marginBottom: '2px' }}>
-                <img src={close} width='10' />&nbsp;&nbsp;&nbsp;
-                test_design.fig
-              </p>
+              {attachments.map((attachment, key) => (
+                <p key={key} className={styles.attachmentRow}>
+                  <Sprite name='close' customStyle={closeIconStyle} />
+                  {attachment}
+                </p>
+              ))}
             </Grid.Column>
           </Grid.Row>
           <Grid.Row centered>
@@ -137,40 +124,40 @@ const InviteFreelancerPage = () => {
               <Divider />
             </Grid.Column>
           </Grid.Row>
-          <Grid.Row style={{ paddingTop: 0 }} centered>
+          <Grid.Row className={styles.noPT} centered>
             <Grid.Column computer={10} mobile={16}>
-              <PanelSubTitle title='Rate and Weekly limit' customStyle={title} />
+              <PanelSubTitle title='Rate and Weekly limit' customStyle={titleStyle} />
             </Grid.Column>
           </Grid.Row>
-          <Grid.Row style={clearPadding} centered>
+          <Grid.Row className={styles.noPadding} centered>
             <Grid.Column computer={10} mobile={16}>
               <Grid>
                 <Grid.Column computer={5} mobile={8}>
-                  <p>Rate</p>
+                  <Paragraph>Rate</Paragraph>
                   <Input
                     fluid
-                    label={{ basic: true, content: '$/hr', className: styles.inputLabel }}
                     labelPosition='right'
+                    label={{ basic: true, content: '$/hr', className: styles.inputLabel }}
                   />
                 </Grid.Column>
                 <Grid.Column computer={5} mobile={8}>
-                  <p>Weekly limit</p>
+                  <Paragraph>Weekly limit</Paragraph>
                   <Input
                     fluid
-                    label={{ basic: true, content: 'hrs/week', className: styles.inputLabel }}
                     labelPosition='right'
+                    label={{ basic: true, content: 'hrs/week', className: styles.inputLabel }}
                   />
                 </Grid.Column>
                 <Grid.Column computer={4} mobile={16} verticalAlign={isMobile ? 'top' : 'middle'}>
-                  <p style={isMobile ? { display: 'none' } : { visibility: 'hidden' }}>test</p>
-                  <span>= <span style={orangeText}>$457.5</span> max / week</span>
+                  <div className={styles[isMobile ?  'fieldNotDisplayed' : 'fieldHidden']} />
+                  <span>= <Text color='#EF6722'>$457.5</Text> max / week</span>
                 </Grid.Column>
               </Grid>
             </Grid.Column>
           </Grid.Row>
-          <Grid.Row style={{ paddingBottom: 0 }} centered>
+          <Grid.Row className={styles.noPB} centered>
             <Grid.Column computer={10} mobile={16}>
-              <p>Manually time</p>
+              <Paragraph>Manually time</Paragraph>
               <Checkbox label='Allow freelancer to log time manually if needed' />
             </Grid.Column>
           </Grid.Row>
@@ -179,13 +166,9 @@ const InviteFreelancerPage = () => {
               <Divider />
             </Grid.Column>
           </Grid.Row>
-          <Grid.Row style={{ paddingTop: 0 }} centered>
+          <Grid.Row className={styles.noPT} centered>
             <Grid.Column computer={10} mobile={16}>
-              <Button
-                  color='orange'
-                  style={{ fontWeight: 400 }}
-                  className={styles.fieldText}
-              >Send an offer</Button>
+              <Button color='orange' text='Send an offer' />
             </Grid.Column>
           </Grid.Row>
         </Grid>

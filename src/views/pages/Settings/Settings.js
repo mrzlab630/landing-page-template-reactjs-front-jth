@@ -5,14 +5,12 @@ import {
   Button,
   Divider
 } from 'semantic-ui-react';
-
 import {
-  EditIcon,
   Panel,
+  EditIcon,
   FormInput,
   PanelSubTitle
 } from './../../components';
-
 import * as styles from './Settings.less';
 
 const rowStyle = {
