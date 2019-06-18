@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Paragraph  = ({ color, customStyles = {}, children }) => {
+const Paragraph  = ({ color, fontSize, customStyles = {}, children }) => {
     const style = {
-        color
+        color,
+        fontSize
     };
     const paragraphStyle = {
         ...style,

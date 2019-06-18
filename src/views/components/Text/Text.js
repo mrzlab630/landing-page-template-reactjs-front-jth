@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Text  = ({ color, children }) => {
+const Text  = ({ color, fontSize, children }) => {
     const style = {
-        color
+        color,
+        fontSize
     };
     return (
         <span style={style}>{children}</span>
@@ -12,7 +13,8 @@ const Text  = ({ color, children }) => {
 
 Text.propTypes = {
     children: PropTypes.node,
-    color: PropTypes.string
+    color: PropTypes.string,
+    fontSize: PropTypes.string
 };
 
 export default Text;
