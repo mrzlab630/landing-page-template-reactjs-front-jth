@@ -1,0 +1,207 @@
+@paddingBottom: 50px;
+@paddingTop:150px;
+@titleSizeH1:44px !important;
+@titleSizeH3:20px !important;
+
+
+
+
+
+
+.HomePage{
+
+
+}
+
+
+/** -----------------------------
+          first block
+----------------------------------- */
+.HomePageFirst{
+  height: 100vh;
+  background: #C35571;
+  padding-top: @paddingTop;
+  padding-bottom: @paddingBottom;
+  color:#FFFFFF;
+
+  h1{
+    font-size: @titleSizeH1;
+    line-height: @titleSizeH1;
+  }
+
+  h3{
+    font-size: @titleSizeH3;
+    line-height: @titleSizeH3;
+  }
+}
+
+.HomePageFirstImg{
+  padding: 40px;
+}
+
+.HomePageFirstButton{
+  color:#EF6722 !important;
+  background: #FFFFFF !important;
+  width: 180px;
+  height: 44px;
+}
+
+
+@media  all and (max-height: 769px) {
+
+  .HomePageFirst{
+    padding-top: 50px;
+  }
+}
+
+/** -----------------------------
+          second block
+----------------------------------- */
+
+.HomePageSecond {
+  padding-top: @paddingTop;
+  padding-bottom: @paddingBottom;
+
+  .title{
+    padding-bottom:@paddingTop;
+
+    h1{
+      font-size: @titleSizeH1;
+      line-height: @titleSizeH1;
+    }
+    h3{
+      font-size: @titleSizeH3;
+      line-height: @titleSizeH3;
+      color:#404144;
+    }
+  }
+}
+
+/** -----------------------------
+          third block
+----------------------------------- */
+
+.HomePageThird{
+  padding-bottom: @paddingTop;
+  font-size: 20px;
+  line-height: 20px;
+  color: #222426;
+
+  .HomePageThirdButton{
+    background-color: #EF6722  !important;
+    color:#FFFFFF  !important;
+
+    :hover{
+      background-color: #a84b19 !important;
+      color:#FFFFFF !important;
+    }
+  }
+}
+
+/** -----------------------------
+          fourth block
+----------------------------------- */
+
+.HomePageFourth{
+  padding-top: @paddingTop;
+  padding-bottom: @paddingBottom;
+  background: #E4DDE0;
+
+  h1{
+    font-size: @titleSizeH1;
+    line-height: @titleSizeH1;
+  }
+  h3{
+    font-size: @titleSizeH3;
+    line-height: @titleSizeH3;
+    color:#404144;
+  }
+
+  p{
+    margin: 0 auto;
+    max-width: 80%;
+    font-size: 20px;
+    line-height: 32px;
+    padding: 50px;
+  }
+
+  .imgList{
+
+    li{
+      display: inline-block;
+      list-style: none;
+
+      border: none;
+      box-sizing: border-box;
+      border-radius: 100%;
+      padding: 10px;
+
+    }
+
+    .centerImg{
+      border: 3px solid #C9B6BE;
+    }
+  }
+}
+
+
+/** -----------------------------
+          fifth block
+----------------------------------- */
+
+.HomePageFifth{
+  padding-top: @paddingTop;
+  padding-bottom: @paddingTop;
+  background: #F89462;
+  color:#FFFFFF;
+
+  h1{
+    font-size: @titleSizeH1;
+    line-height: @titleSizeH1;
+  }
+  h3{
+    font-size: @titleSizeH3;
+    line-height: @titleSizeH3;
+    color:#404144;
+  }
+
+  .titleBlock{
+    padding: 0 0 50px 0;
+    text-align: center;
+  }
+
+
+  .cardInfo{
+    background: transparent;
+    box-shadow: none;
+
+
+    .title{
+      color: #FFFFFF !important;
+      font-size: 20px !important;
+      line-height: 28px !important;
+      padding-top: 30px;
+      text-align: center;
+      min-height: 120px;
+    }
+
+    .info{
+      color: #FFFFFF !important;
+      font-size: 16px !important;
+      line-height: 26px !important;
+    }
+
+    img{
+      background: none !important;
+    }
+  }
+
+
+
+}
+
+
+
+
+
+

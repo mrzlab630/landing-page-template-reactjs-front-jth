@@ -7,119 +7,24 @@ import { auth } from './../utils/authToken';
 import { LayoutNavigation, LayoutNoFooter } from './../views/layouts';
 
 import {
-  ToDoPage,
-  ToDoTaskPage,
-  BillingPage,
-  SettingsPage,
-  PaymentsPage,
-  ContractPage,
-  ProjectsPage,
-  MessangerPage,
-  ProjectsAllPage,
-  TimeScreensPage,
-  TimeSummaryPage,
-  TimeContractPage,
-  PendingContractPage,
-  InviteFreelancerPage
+  HomePage,
 } from './../views/pages';
 
 const routes = [
   {
     exact: true,
     path: '/',
-    page: SettingsPage,
+    page: HomePage,
     layout: LayoutNavigation,
   },
-  {
-    exact: true,
-    path: '/settings',
-    page: SettingsPage,
-    layout: LayoutNavigation,
-  },
-  {
-    exact: true,
-    path: '/billing',
-    page: BillingPage,
-    layout: LayoutNavigation,
-  },
-  {
-    exact: true,
-    path: '/payments',
-    page: PaymentsPage,
-    layout: LayoutNavigation,
-  },
-  {
-    exact: true,
-    path: '/activity',
-    page: TimeScreensPage,
-    layout: LayoutNavigation,
-  },
-  {
-    exact: true,
-    path: '/summary',
-    page: TimeSummaryPage,
-    layout: LayoutNavigation,
-  },
-  {
-    exact: true,
-    path: '/contract/pending',
-    page: PendingContractPage,
-    layout: LayoutNavigation,
-  },
-  {
-    exact: true,
-    path: '/contract',
-    page: ContractPage,
-    layout: LayoutNavigation,
-  },
-  {
-    exact: true,
-    path: '/contract/time',
-    page: TimeContractPage,
-    layout: LayoutNavigation,
-  },
-  {
-    exact: true,
-    path: '/invite',
-    page: InviteFreelancerPage,
-    layout: LayoutNavigation,
-  },
-  {
-    exact: true,
-    path: '/projects',
-    page: ProjectsPage,
-    layout: LayoutNavigation,
-  },
-  {
-    exact: true,
-    path: '/projects/all',
-    page: ProjectsAllPage,
-    layout: LayoutNavigation
-  },
-  {
-    exact: true,
-    path: '/todo',
-    page: ToDoPage,
-    layout: LayoutNavigation
-  },
-  {
-    exact: true,
-    path: '/todo/task',
-    page: ToDoTaskPage,
-    layout: LayoutNavigation
-  },
-  {
-    exact: true,
-    path: '/messanger',
-    page: MessangerPage,
-    layout: LayoutNavigation
-  },
+    /*
   {
     path: '',
     // eslint-disable-next-line react/display-name
     page: SettingsPage,
     layout: LayoutNoFooter,
   },
+  */
 ];
 
 const RouteWithSubRoutes = route => {
