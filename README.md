@@ -1,6 +1,6 @@
 ## landing page template
 
-![preview](https://raw.githubusercontent.com/mrzlab630/landing-page-template-reactjs-front-jth/master/src/assets/preview.svg)
+![preview](https://github.com/mrzlab630/landing-page-template-reactjs-front-jth/blob/master/src/assets/preview.png?raw=true)
 
 
 **Install instructions:**
