@@ -1,18 +1,18 @@
+## landing page template
+
+![preview](https://github.com/mrzlab630/landing-page-template-reactjs-front-jth/blob/master/src/assets/imgs/preview.png?raw=true)
+
 Install instructions:
-- yarn install
-- yarn start
+* yarn install
+* yarn start
 
 
-ready pages:
-http://localhost:3000/
-http://localhost:3000/settings
-http://localhost:3000/billing
-http://localhost:3000/payments
-http://localhost:3000/activity
-http://localhost:3000/summary
-http://localhost:3000/contract/pending
-http://localhost:3000/contract
-http://localhost:3000/contract/time
-http://localhost:3000/invite
-http://localhost:3000/projects
-http://localhost:3000/projects/all
+
+
+### start
+http://localhost:3011/
+
+
+## TODO
+
+* mobile adaptation
